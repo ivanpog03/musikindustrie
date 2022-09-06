@@ -1,20 +1,5 @@
 <?php
-/*
- Bestellung von Informationsmaterial, mit serverseitiger Formularvalidierung
- 19.06.2020, Pius Senn
 
- Variante 1
- - Prüfen der Daten des Formulars info_bestellung_1.html
- - Bei Fehlern: Anzeigen von Fehlermeldungen, Anzeigen des Korrektur-Formulars
- - Wenn alles ok: Versenden der Daten per E-Mail, Anzeigen der Bestätigungsseite
-
- Besonderheiten der Lösung
- - Zahlreiche Wechsel zwischen HTML und PHP
- - Checkbox und Radiobutton kompliziert gelöst
- - nicht komfortabel konfigurierbar
- - Prüfen der E-Mail-Adresse mit RegEx
- Zusätzlich wird die nicht empfohlene Variante mit der Funktion filter_var() gezeigt
- */
 
 header('Content-Type: text/html; charset=utf-8');
 ?>
@@ -143,16 +128,7 @@ $fehlerWie=1;
 $fehlerWelche=1;
     }
 
-    /*
-65 Nicht empfohlene Variante mit der Funktion filter_var()
-66 - Achtung: E-Mail-Adressen mit Umlauten werden bei dieser Variante abgelehnt!
-67
-68 if(! filter_var($email, FILTER_VALIDATE_EMAIL)){
-69 $fehlerEmail = 1;
-70 }
--1-
-form_test_send_1.php Freitag, 19. Juni 2020 14:03
-71 */
+
 
 
     // Wenn ein oder mehrere Felder nicht ausgefüllt sind
